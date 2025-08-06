@@ -189,8 +189,49 @@ print("~", b, "=", ~b)  # Bitwise NOT
 print(a, "<< 1 =", a << 1)  # Left shift
 print(a, ">> 1 =", a >> 1)  # Right shift
 """
+"""
 a= 12
-b=12
+b= 12
 print(a is b)  # checks if two variables point to the same object in memory.
 print(id(a), id(b))  # Print memory addresses
 print(id(a) == id(b))  # Check if memory addresses are the same
+"""
+
+'''
+# check if a number is even or odd
+num = int(input("Enter a number: "))
+if num % 2 == 0:
+    print(f"{num} is an even number.")
+else:
+    print(f"{num} is an odd number.")
+
+#check if year is leap year or not
+year = int(input("Enter a year: "))
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print(f"{year} is a leap year.")
+else:
+    print(f"{year} is not a leap year.")
+
+# count vowels in a string
+def count_vowels(s):
+    vowels = "aeiouAEIOU"
+    count = 0
+    for char in s:
+        if char in vowels:
+            count += 1
+    return count
+str1= input("Enter a string: ")
+vowel_count = count_vowels(str1)
+print(f"The number of vowels in '{str1}' is: {vowel_count}")
+'''
+'''
+# there ar 5280 feet in a mile. write a program to convert miles to feet.
+miles = float(input("Enter miles: "))
+feet = miles * 5280
+print(f"{miles} miles is equal to {feet} feet.")
+'''
+# number of seconds in hours,minutes and seconds
+enterd_time = input("Enter time in HH:MM:SS format: ")
+hours, minutes, seconds = map(int, enterd_time.split(':'))
+total_seconds = hours * 3600 + minutes * 60 + seconds
+print(f"Total seconds in {enterd_time} is: {total_seconds} seconds.")
